@@ -1,0 +1,21 @@
+Gradient-Based: 
+1. XGBoost
+2. LightGBM
+3. CatBoost
+
+Decision Tree-Based Models: 
+4. Random Forest
+
+Support Vector Models:
+5. Nu-SVR
+
+Neural Networks:
+6. MLP, 
+
+Bayesian Models:
+7. Gaussian Process Regressor (GPR)
+8. Bayesian Linear Regression
+9. Bayesian Neural Networks (BNNs)
+
+Hybrid Models:
+10. Random Forest with Bagging
