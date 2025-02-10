@@ -1,21 +1,37 @@
-Gradient-Based: 
-1. XGBoost
-2. LightGBM
-3. CatBoost
+Stage - 1
+1. Decision Tree-Based Models (1st stage): 
+	Random Forest
+	Extra Trees
+	Decision Tree
 
-Decision Tree-Based Models: 
-4. Random Forest
+2. Support Vector Models (1st stage):
+	SVR
+	Nu-SVR
 
-Support Vector Models:
-5. Nu-SVR
+3. Neural Networks (1st stage):
+	MLP
+	FNN
 
-Neural Networks:
-6. MLP, 
+4. Bayesian Models (1st stage):
+	Gaussian Process Regressor (GPR)
+	Bayesian Linear Regression
+	Bayesian Neural Networks (BNNs)
 
-Bayesian Models:
-7. Gaussian Process Regressor (GPR)
-8. Bayesian Linear Regression
-9. Bayesian Neural Networks (BNNs)
+5. Statistical Models:
+	Monte-Carlo
+	Polynomial Regression
+	Holt-Winters Method
 
 Hybrid Models:
-10. Random Forest with Bagging
+	Random Forest with Bagging
+
+Stage - 2
+1. Gradient-Based (2nd stage): 
+	XGBoost
+	LightGBM
+	CatBoost
+
+2. Ensemble Methods (2nd stage) :
+	Stacking
+	Voting
+	Bagging
