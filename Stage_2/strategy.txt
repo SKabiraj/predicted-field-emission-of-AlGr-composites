@@ -1,0 +1,27 @@
+Combine All Four Models (Best Approach for Stacking & Voting)
+Implement Each Model Individually (Best for Bagging)
+
+order of implementation:
+1. Stacking (GPR, SVR, RF, Poly as input to meta-model) → Uses all models effectively.
+2️⃣ CatBoost on GPR predictions → Best boosting model on the best first-stage model.
+3️⃣ XGBoost on GPR predictions → Strong, but slightly less optimized than CatBoost for small data.
+4️⃣ LightGBM on GPR predictions → Fast, but less reliable than CatBoost & XGBoost on small data.
+
+Mid Tier (Still Strong, but Not as Good as GPR-Based Models)
+5️⃣ CatBoost on SVR predictions → SVR was second-best in Stage-1, so it should perform well here.
+6️⃣ XGBoost on SVR predictions
+7️⃣ LightGBM on SVR predictions
+
+8️⃣ CatBoost on RF predictions → RF was third-best in Stage-1, so boosting should improve it slightly.
+9️⃣ XGBoost on RF predictions
+🔟 LightGBM on RF predictions
+
+Lower Tier (Polynomial Regression Models, Least Likely to Perform Well)
+1️⃣1️⃣ CatBoost on Polynomial Regression predictions
+1️⃣2️⃣ XGBoost on Polynomial Regression predictions
+1️⃣3️⃣ LightGBM on Polynomial Regression predictions
+
+Bottom Tier (Weakest Approach)
+1️⃣4️⃣ Voting → Simpler averaging, doesn’t optimize model contributions well.
+1️⃣5️⃣ Bagging → Not suited for boosting strong base models.
+
